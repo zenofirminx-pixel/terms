@@ -45,6 +45,7 @@
       display: flex;
       flex-direction: column;
       gap: 24px;
+      margin-bottom: 40px;
     }
     
     .term-item {
@@ -84,23 +85,106 @@
       line-height: 1.7;
     }
     
-    .accept-notice {
-      margin-top: 40px;
-      padding: 20px;
+    /* ZONE ACCEPTATION */
+    .accept-section {
       background: #0a0a0a;
       border: 1px solid #1a1a1a;
       border-radius: 12px;
-      text-align: center;
+      padding: 24px;
+      position: sticky;
+      bottom: 20px;
+      backdrop-filter: blur(10px);
     }
     
-    .accept-notice p {
-      font-size: 14px;
-      color: #888;
+    .checkbox-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
     }
     
-    .accept-notice strong {
+    .checkbox-wrap input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: #8ab4f8;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    
+    .checkbox-wrap label {
+      font-size: 15px;
       color: #fff;
+      cursor: pointer;
+      user-select: none;
+      flex: 1;
+    }
+    
+    .back-btn {
+      width: 100%;
+      padding: 14px;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      color: #666;
+      font-size: 15px;
       font-weight: 600;
+      cursor: not-allowed;
+      transition: all 0.2s ease;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      height: 50px;
+    }
+    
+    .back-btn.active {
+      background: #8ab4f8;
+      border-color: #8ab4f8;
+      color: #000;
+      cursor: pointer;
+    }
+    
+    .back-btn.active:hover {
+      background: #aecbfa;
+      transform: translateY(-1px);
+    }
+    
+    .back-btn.active:active {
+      transform: scale(0.98);
+    }
+    
+    /* ANIMATION 3 POINTS - TOUS ANIMÉS */
+    .back-btn.loading {
+      pointer-events: none;
+      color: #000;
+    }
+    
+    .dot {
+      width: 6px;
+      height: 6px;
+      background: #000;
+      border-radius: 50%;
+      animation: bounce 1.4s infinite ease-in-out;
+    }
+    
+    .dot:nth-child(1) {
+      animation-delay: -0.32s;
+    }
+    
+    .dot:nth-child(2) {
+      animation-delay: -0.16s;
+    }
+    
+    @keyframes bounce {
+      0%, 80%, 100% {
+        transform: scale(0.6);
+        opacity: 0.4;
+      }
+      40% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
     
     @media (max-width: 768px) {
@@ -123,137 +207,173 @@
       .term-text {
         font-size: 14px;
       }
+      
+      .accept-section {
+        bottom: 16px;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Conditions d'utilisation</h1>
-  <p class="subtitle">AurX AI - Dernière mise à jour : Juin 2026</p>
+  <p class="subtitle">AurX AI - Dernière mise à jour : 13 Juin 2026</p>
   
   <div class="terms-list">
     <div class="term-item">
       <div class="term-number">01</div>
-      <div class="term-title">Acceptation</div>
-      <div class="term-text">En utilisant AurX AI, vous acceptez toutes les conditions.</div>
+      <div class="term-title">Acceptation des conditions</div>
+      <div class="term-text">En accédant et en utilisant AurX AI, vous acceptez d'être lié par ces conditions d'utilisation. Si vous n'acceptez pas ces termes, cessez immédiatement d'utiliser l'application. L'utilisation continue constitue une acceptation pleine et entière.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">02</div>
-      <div class="term-title">Service IA</div>
-      <div class="term-text">Assistant IA pouvant générer des réponses imparfaites.</div>
+      <div class="term-title">Description du service</div>
+      <div class="term-text">AurX AI est un assistant conversationnel basé sur des modèles de langage avancés. Il génère des réponses en texte, code, formules mathématiques LaTeX, et peut traiter des images. Les réponses sont générées par IA et peuvent contenir des erreurs, inexactitudes ou hallucinations. Ne considérez jamais les réponses comme des faits vérifiés.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">03</div>
       <div class="term-title">Âge minimum</div>
-      <div class="term-text">13 ans minimum requis.</div>
+      <div class="term-text">Vous devez avoir au minimum 13 ans pour utiliser AurX AI. Les utilisateurs entre 13 et 18 ans doivent avoir l'autorisation d'un parent ou tuteur légal. Nous ne collectons pas sciemment de données d'enfants de moins de 13 ans.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">04</div>
-      <div class="term-title">Usage légal</div>
-      <div class="term-text">Utilisation uniquement légale autorisée.</div>
+      <div class="term-title">Usage légal et éthique</div>
+      <div class="term-text">Vous vous engagez à utiliser AurX AI uniquement à des fins légales. Interdiction de générer du contenu illégal, diffamatoire, haineux, ou violant les droits d'autrui. Vous ne devez pas utiliser l'IA pour contourner des mesures de sécurité, pirater, ou créer des malwares.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">05</div>
       <div class="term-title">Contenus interdits</div>
-      <div class="term-text">Spam, fraude, violence interdits.</div>
+      <div class="term-text">Sont strictement interdits : spam, phishing, fraude, contenu sexuel impliquant des mineurs, violence extrême, terrorisme, instructions pour fabriquer des armes ou drogues. Nous nous réservons le droit de bloquer l'accès en cas d'abus détecté.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">06</div>
-      <div class="term-title">Responsabilité</div>
-      <div class="term-text">L'utilisateur est responsable de l'usage.</div>
+      <div class="term-title">Responsabilité de l'utilisateur</div>
+      <div class="term-text">Vous êtes seul responsable de l'usage que vous faites des réponses générées. AurX AI ne remplace pas un avis professionnel médical, juridique, financier ou technique. Vérifiez toujours les informations critiques auprès de sources officielles avant de prendre des décisions importantes.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">07</div>
-      <div class="term-title">Données</div>
-      <div class="term-text">Données stockées localement uniquement.</div>
+      <div class="term-title">Stockage des données</div>
+      <div class="term-text">Vos conversations sont stockées localement dans le localStorage de votre navigateur. Aucune donnée n'est envoyée vers nos serveurs. Vous pouvez supprimer l'historique à tout moment via les paramètres. Si vous videz le cache du navigateur, vos données seront perdues.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">08</div>
-      <div class="term-title">Sécurité</div>
-      <div class="term-text">Ne partagez pas d'informations sensibles.</div>
+      <div class="term-title">Sécurité et confidentialité</div>
+      <div class="term-text">Ne partagez jamais d'informations sensibles : mots de passe, numéros de carte bancaire, numéros de sécurité sociale, données médicales confidentielles. Bien que nous n'enregistrions rien, vos prompts transitent par des API tierces pour traitement. Évitez toute donnée personnelle identifiante.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">09</div>
-      <div class="term-title">Disponibilité</div>
-      <div class="term-text">Service non garanti 100% uptime.</div>
+      <div class="term-title">Disponibilité du service</div>
+      <div class="term-text">AurX AI est fourni "en l'état" sans garantie de disponibilité 100%. Des interruptions peuvent survenir pour maintenance, surcharge des API, ou problèmes réseau. Nous ne garantissons pas un temps de réponse ou une disponibilité spécifique.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">10</div>
-      <div class="term-title">Modifications</div>
-      <div class="term-text">Conditions modifiables à tout moment.</div>
+      <div class="term-title">Modifications des conditions</div>
+      <div class="term-text">Nous pouvons modifier ces conditions à tout moment. La date de mise à jour sera indiquée en haut de cette page. L'utilisation continue après modification vaut acceptation des nouveaux termes. Consultez régulièrement cette page.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">11</div>
-      <div class="term-title">API externe</div>
-      <div class="term-text">Utilisation d'API tierces possible.</div>
+      <div class="term-title">APIs tierces</div>
+      <div class="term-text">AurX AI utilise des APIs de fournisseurs tiers pour la génération de réponses. Vos requêtes sont transmises à ces services pour traitement. Ces fournisseurs ont leurs propres politiques de confidentialité. Nous ne contrôlons pas leur traitement des données en transit.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">12</div>
-      <div class="term-title">Limitation</div>
-      <div class="term-text">Service fourni "tel quel".</div>
+      <div class="term-title">Limitation de garantie</div>
+      <div class="term-text">Le service est fourni "tel quel" et "selon disponibilité" sans garantie d'aucune sorte. Nous ne garantissons pas l'exactitude, la fiabilité, ou l'adéquation des réponses à un usage particulier. L'IA peut générer du contenu erroné ou biaisé.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">13</div>
-      <div class="term-title">Confidentialité</div>
-      <div class="term-text">Aucune vente de données.</div>
+      <div class="term-title">Confidentialité et données</div>
+      <div class="term-text">Nous ne vendons, ne louons, ni ne partageons vos données personnelles. Aucun tracking, analytics, ou cookies tiers ne sont utilisés. L'app fonctionne entièrement côté client sauf les appels API nécessaires à la génération IA.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">14</div>
       <div class="term-title">Performance</div>
-      <div class="term-text">Dépend du réseau utilisateur.</div>
+      <div class="term-text">La vitesse de réponse dépend de votre connexion Internet, de la charge des serveurs API, et de la complexité de votre requête. Les réponses longues, le code, ou les formules LaTeX peuvent prendre plusieurs secondes à générer.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">15</div>
-      <div class="term-title">Connexion</div>
-      <div class="term-text">Internet requis pour fonctionner.</div>
+      <div class="term-title">Connexion requise</div>
+      <div class="term-text">Une connexion Internet active est obligatoire pour utiliser AurX AI. L'app ne fonctionne pas hors ligne car elle nécessite des appels API pour générer les réponses. Les conversations passées restent consultables sans connexion.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">16</div>
-      <div class="term-title">Interdiction copie</div>
-      <div class="term-text">Reverse engineering interdit.</div>
+      <div class="term-title">Propriété intellectuelle</div>
+      <div class="term-text">Le code, design, et concept d'AurX AI sont protégés. Interdiction de copier, décompiler, faire du reverse engineering, ou créer des services dérivés. Les réponses générées par l'IA vous appartiennent pour usage personnel et commercial, sous votre responsabilité.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">17</div>
-      <div class="term-title">Mise à jour</div>
-      <div class="term-text">App évolutive en continu.</div>
+      <div class="term-title">Mises à jour</div>
+      <div class="term-text">AurX AI est mis à jour régulièrement avec de nouvelles fonctionnalités, corrections de bugs, et améliorations du modèle. Les mises à jour sont automatiques pour les PWA installées. Aucune action requise de votre part.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">18</div>
       <div class="term-title">Support</div>
-      <div class="term-text">Support limité.</div>
+      <div class="term-text">Le support est fourni sur une base "meilleur effort" via les canaux officiels. Nous ne garantissons pas de temps de réponse. Pour les bugs critiques, utilisez le formulaire de contact. L'app étant gratuite, le support est limité.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">19</div>
-      <div class="term-title">Mobile</div>
-      <div class="term-text">Optimisé Android PWA.</div>
+      <div class="term-title">Plateformes supportées</div>
+      <div class="term-text">AurX AI est optimisé pour les navigateurs modernes et PWA Android. Compatible Chrome, Edge, Firefox, Safari. L'expérience peut varier sur navigateurs obsolètes. L'app s'installe comme PWA pour une expérience native sur mobile.</div>
     </div>
     
     <div class="term-item">
       <div class="term-number">20</div>
-      <div class="term-title">Accord final</div>
-      <div class="term-text">En continuant, vous acceptez l'intégralité des conditions ci-dessus.</div>
+      <div class="term-title">Accord final et résiliation</div>
+      <div class="term-text">Ces conditions constituent l'accord complet entre vous et AurX AI. Nous nous réservons le droit de suspendre ou résilier votre accès en cas de violation des présentes conditions, sans préavis. En continuant d'utiliser l'app, vous acceptez l'intégralité de ces termes.</div>
     </div>
   </div>
   
-  <div class="accept-notice">
-    <p>En utilisant AurX AI, vous reconnaissez avoir lu et accepté ces conditions.</p>
+  <div class="accept-section">
+    <div class="checkbox-wrap">
+      <input type="checkbox" id="acceptCheck">
+      <label for="acceptCheck">J'ai lu et j'accepte les conditions d'utilisation</label>
+    </div>
+    <button class="back-btn" id="backBtn">Revenir en arrière</button>
   </div>
+
+  <script>
+    const checkbox = document.getElementById('acceptCheck');
+    const backBtn = document.getElementById('backBtn');
+    
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        backBtn.classList.add('active');
+      } else {
+        backBtn.classList.remove('active');
+      }
+    });
+    
+    backBtn.addEventListener('click', function() {
+      if (!checkbox.checked) return;
+      
+      backBtn.classList.add('loading');
+      backBtn.innerHTML = '<span class="dot"></span><span class="dot"></span><span class="dot"></span>';
+      
+      setTimeout(() => {
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.close();
+        }
+      }, 5000); // 5 secondes
+    });
+  </script>
 </body>
 </html>
