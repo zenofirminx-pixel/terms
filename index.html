@@ -1,0 +1,526 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conditions d'utilisation de l'assistant d'intelligence artificielle Infinity.">
+  <title>Conditions d'utilisation - Infinity</title>  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background: #000;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    body {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .terms-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .term-item {
+      background: #0a0a0a;
+      border: 1px solid #1a1a1a;
+      border-radius: 12px;
+      padding: 20px;
+      transition: border-color 0.2s ease;
+    }
+
+    .term-item:hover {
+      border-color: #2a2a2a;
+    }
+
+    .term-number {
+      display: inline-block;
+      background: #1a1a1a;
+      color: #8ab4f8;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .term-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .term-text {
+      font-size: 15px;
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .accept-section {
+      background: #0a0a0a;
+      border: 1px solid #1a1a1a;
+      border-radius: 12px;
+      padding: 24px;
+      position: sticky;
+      bottom: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .checkbox-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .checkbox-wrap input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: #8ab4f8;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .checkbox-wrap label {
+      font-size: 15px;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+      flex: 1;
+    }
+
+    .back-btn {
+      width: 100%;
+      padding: 14px;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      color: #666;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: not-allowed;
+      transition: all 0.2s ease;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      height: 50px;
+    }
+
+    .back-btn.active {
+      background: #8ab4f8;
+      border-color: #8ab4f8;
+      color: #000;
+      cursor: pointer;
+    }
+
+    .back-btn.active:hover {
+      background: #aecbfa;
+      transform: translateY(-1px);
+    }
+
+    .back-btn.active:active {
+      transform: scale(0.98);
+    }
+
+    .back-btn.loading {
+      pointer-events: none;
+      color: #000;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      background: #000;
+      border-radius: 50%;
+      animation: bounce 1.4s infinite ease-in-out;
+    }
+
+    .dot:nth-child(1) {
+      animation-delay: -0.32s;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: -0.16s;
+    }
+
+    @keyframes bounce {
+      0%, 80%, 100% {
+        transform: scale(0.6);
+        opacity: 0.4;
+      }
+
+      40% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 24px 16px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .term-item {
+        padding: 16px;
+      }
+
+      .term-title {
+        font-size: 16px;
+      }
+
+      .term-text {
+        font-size: 14px;
+      }
+
+      .accept-section {
+        bottom: 16px;
+      }
+    }
+  </style></head><body>
+  <h1>Conditions d'utilisation</h1>
+  <p class="subtitle">Infinity — Dernière mise à jour : 18 octobre 2026</p>  <div class="terms-list"><div class="term-item">
+  <div class="term-number">01</div>
+  <div class="term-title">Acceptation des conditions</div>
+  <div class="term-text">
+    En accédant à Infinity ou en l'utilisant, vous reconnaissez avoir lu
+    les présentes conditions d'utilisation. Si vous ne les acceptez pas,
+    veuillez cesser d'utiliser le service. Lorsque l'application vous
+    demande explicitement votre accord, vous devez l'accepter pour
+    poursuivre l'utilisation concernée.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">02</div>
+  <div class="term-title">Description du service</div>
+  <div class="term-text">
+    Infinity est un assistant conversationnel utilisant l'intelligence
+    artificielle pour répondre aux questions, expliquer des concepts,
+    aider à la rédaction, proposer du code et accompagner l'apprentissage
+    sur différents sujets. L'application peut notamment afficher du
+    Markdown et des formules mathématiques LaTeX. Selon les fonctionnalités
+    disponibles, certaines demandes peuvent également déclencher une
+    recherche sur le Web. Les capacités accessibles dépendent de la
+    version de l'application et des services externes utilisés.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">03</div>
+  <div class="term-title">Âge minimum</div>
+  <div class="term-text">
+    Infinity n'est pas destiné aux enfants qui n'ont pas l'âge minimum
+    autorisé par la législation applicable. Les mineurs doivent utiliser
+    le service avec les autorisations ou la supervision exigées par la
+    loi de leur pays. Avant de publier ces conditions, l'éditeur doit
+    préciser une règle d'âge adaptée aux pays dans lesquels Infinity est
+    proposé et aux exigences des fournisseurs utilisés.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">04</div>
+  <div class="term-title">Usage légal et responsable</div>
+  <div class="term-text">
+    Vous vous engagez à utiliser Infinity conformément aux lois applicables
+    et à respecter les droits d'autrui. Vous ne devez pas utiliser le
+    service pour commettre une infraction, porter atteinte à la vie privée,
+    contourner illicitement des mesures de sécurité ou faciliter des
+    activités nuisibles.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">05</div>
+  <div class="term-title">Utilisations interdites</div>
+  <div class="term-text">
+    Il est interdit d'utiliser Infinity pour faciliter la fraude, le
+    phishing, le spam malveillant, les logiciels nuisibles, les abus
+    envers des personnes, l'exploitation sexuelle de mineurs, les actes
+    terroristes ou d'autres activités illégales. Vous ne devez pas non
+    plus chercher à perturber le service, à accéder sans autorisation
+    à ses systèmes ou à porter atteinte à son fonctionnement.
+    En cas d'abus, l'accès peut être limité ou suspendu dans la mesure
+    permise par la loi et les possibilités techniques du service.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">06</div>
+  <div class="term-title">Responsabilité de l'utilisateur</div>
+  <div class="term-text">
+    Vous êtes responsable de la manière dont vous utilisez les réponses
+    fournies par Infinity. L'intelligence artificielle peut produire des
+    erreurs, des informations incomplètes ou des conclusions trompeuses.
+    Vérifiez les informations importantes auprès de sources fiables.
+    Infinity ne remplace pas l'avis d'un professionnel qualifié en matière
+    médicale, juridique, financière ou dans tout autre domaine exigeant
+    une expertise particulière.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">07</div>
+  <div class="term-title">Conservation des conversations</div>
+  <div class="term-text">
+    Pour permettre le fonctionnement de l'historique et de la mémoire
+    conversationnelle, certaines données peuvent être transmises et
+    conservées sur les serveurs utilisés par Infinity, notamment dans
+    une base de données. La conservation dépend des fonctionnalités
+    activées et des règles techniques applicables. Le code du service
+    prévoit une suppression des anciens messages au-delà d'une période
+    de 30 jours ; cette règle ne constitue pas une garantie de suppression
+    immédiate de toutes les copies, sauvegardes ou données conservées
+    séparément. La mémoire de l'assistant peut être gérée séparément
+    de l'historique des messages.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">08</div>
+  <div class="term-title">Sécurité et confidentialité</div>
+  <div class="term-text">
+    Évitez de transmettre à Infinity des informations particulièrement
+    sensibles, telles que des mots de passe, des coordonnées bancaires
+    complètes ou des données confidentielles qui ne sont pas nécessaires
+    à votre demande. Les messages envoyés à l'assistant sont traités par
+    des services techniques externes nécessaires à la génération des
+    réponses. Ne considérez pas une conversation avec l'IA comme un canal
+    de communication bénéficiant automatiquement d'un secret professionnel.
+    Pour plus d'informations, consultez la page de confidentialité
+    d'Infinity.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">09</div>
+  <div class="term-title">Disponibilité du service</div>
+  <div class="term-text">
+    Infinity est fourni selon les possibilités techniques disponibles.
+    Des interruptions peuvent survenir en raison d'une maintenance,
+    d'une panne, d'une surcharge, d'un problème de réseau ou de
+    l'indisponibilité d'un fournisseur externe. Aucune disponibilité
+    permanente ni aucun délai de réponse précis ne sont garantis.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">10</div>
+  <div class="term-title">Modification des conditions</div>
+  <div class="term-text">
+    Les présentes conditions peuvent être mises à jour pour tenir compte
+    de l'évolution d'Infinity, de ses fonctionnalités ou des obligations
+    applicables. La date de la dernière mise à jour figure en haut de
+    cette page. Lorsque la loi l'exige, les modifications importantes
+    seront portées à la connaissance des utilisateurs par un moyen adapté.
+    Nous vous invitons à consulter périodiquement cette page.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">11</div>
+  <div class="term-title">Services et API de tiers</div>
+  <div class="term-text">
+    Infinity utilise des services externes pour traiter les demandes et
+    générer les réponses. Le traitement du langage repose notamment sur
+    un modèle d'intelligence artificielle accessible par l'intermédiaire
+    d'OpenRouter. Certaines recherches sur le Web peuvent être effectuées
+    par l'intermédiaire de Tavily lorsqu'une requête déclenche cette
+    fonctionnalité. Les données nécessaires peuvent être transmises aux
+    fournisseurs concernés. Leur traitement est également soumis à leurs
+    conditions et politiques applicables.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">12</div>
+  <div class="term-title">Limites de l'intelligence artificielle</div>
+  <div class="term-text">
+    Les réponses d'Infinity sont générées automatiquement et ne sont pas
+    nécessairement vérifiées par un être humain. Elles peuvent être
+    incorrectes, dépassées, biaisées ou inadaptées à votre situation.
+    Vous devez exercer votre jugement, vérifier les résultats importants
+    et éviter de prendre une décision à risque sur la seule base d'une
+    réponse générée par l'IA.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">13</div>
+  <div class="term-title">Données personnelles</div>
+  <div class="term-text">
+    Infinity traite les données nécessaires à son fonctionnement, qui
+    peuvent inclure les messages, l'historique, un identifiant de session
+    ou d'utilisateur et des informations utilisées par la mémoire
+    conversationnelle. Les données peuvent être traitées par les
+    fournisseurs techniques nécessaires au service. Les demandes adressées
+    à l'IA nécessitent une communication avec des serveurs externes.
+    Pour connaître les catégories de données traitées, les durées de
+    conservation et les moyens d'exercer vos droits, consultez la
+    politique de confidentialité d'Infinity.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">14</div>
+  <div class="term-title">Performance</div>
+  <div class="term-text">
+    La vitesse de réponse dépend notamment de votre connexion Internet,
+    de la complexité de la demande et de la disponibilité des services
+    externes. Les conversations longues, les réponses détaillées,
+    le code et les formules mathématiques peuvent nécessiter davantage
+    de temps de traitement.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">15</div>
+  <div class="term-title">Connexion Internet</div>
+  <div class="term-text">
+    Une connexion Internet est nécessaire pour envoyer des demandes à
+    l'intelligence artificielle et recevoir ses réponses. Certaines
+    données déjà chargées peuvent rester visibles selon le fonctionnement
+    de votre navigateur et de l'application, mais l'accès à l'historique
+    ou aux autres fonctions hors ligne n'est pas garanti.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">16</div>
+  <div class="term-title">Propriété intellectuelle</div>
+  <div class="term-text">
+    Le nom Infinity, son identité visuelle, son interface et ses éléments
+    logiciels peuvent être protégés par les droits applicables. Sauf
+    autorisation ou exception prévue par la loi, vous ne devez pas
+    reproduire ou exploiter les éléments protégés de l'application d'une
+    manière portant atteinte aux droits de leur titulaire. Vous restez
+    responsable de vérifier que l'utilisation des contenus générés
+    respecte les droits de tiers et les conditions des services utilisés.
+    Les droits applicables aux réponses générées peuvent dépendre de la
+    législation et des conditions pertinentes.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">17</div>
+  <div class="term-title">Mises à jour</div>
+  <div class="term-text">
+    Infinity peut évoluer avec l'ajout de fonctionnalités, des corrections
+    et des améliorations. Les changements disponibles sur la version Web
+    peuvent apparaître sans qu'une nouvelle installation soit nécessaire,
+    selon le fonctionnement de l'application. Les versions Android ou
+    les applications installées peuvent toutefois nécessiter une mise
+    à jour distincte.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">18</div>
+  <div class="term-title">Assistance</div>
+  <div class="term-text">
+    L'assistance est fournie dans la mesure des moyens disponibles.
+    Les délais de réponse ne sont pas garantis. Pour signaler un problème
+    ou demander des informations, utilisez uniquement les canaux de
+    contact officiels communiqués par l'éditeur d'Infinity.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">19</div>
+  <div class="term-title">Plateformes et compatibilité</div>
+  <div class="term-text">
+    Infinity est accessible sur les plateformes et navigateurs compatibles
+    avec la version proposée. L'expérience peut varier selon l'appareil,
+    le navigateur, la connexion et la version installée. La possibilité
+    d'installer l'application comme application Web progressive (PWA)
+    dépend de la prise en charge par le navigateur. La disponibilité
+    de certaines fonctions peut varier selon la plateforme.
+  </div>
+</div>
+
+<div class="term-item">
+  <div class="term-number">20</div>
+  <div class="term-title">Suspension, résiliation et dispositions finales</div>
+  <div class="term-text">
+    En cas d'utilisation abusive ou de violation importante des présentes
+    conditions, l'accès à Infinity peut être limité ou suspendu dans la
+    mesure permise par la loi. Vous pouvez cesser d'utiliser le service
+    à tout moment. Les présentes conditions doivent être interprétées
+    conformément aux règles légales applicables, sans supprimer les
+    droits dont les utilisateurs bénéficient obligatoirement en vertu
+    de la loi.
+  </div>
+</div>
+
+  </div>  <div class="accept-section">
+    <div class="checkbox-wrap">
+      <input type="checkbox" id="acceptCheck">
+      <label for="acceptCheck">
+        J'ai lu et j'accepte les conditions d'utilisation
+      </label>
+    </div><button class="back-btn" id="backBtn" type="button">
+  Revenir en arrière
+</button>
+
+  </div>  <script>
+    const checkbox = document.getElementById('acceptCheck');
+    const backBtn = document.getElementById('backBtn');
+
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        backBtn.classList.add('active');
+      } else {
+        backBtn.classList.remove('active');
+      }
+    });
+
+    backBtn.addEventListener('click', function() {
+      if (!checkbox.checked) return;
+
+      backBtn.classList.add('loading');
+      backBtn.innerHTML = '<span class="dot"></span><span class="dot"></span><span class="dot"></span>';
+
+      setTimeout(() => {
+        if (window.history.length > 1) {
+          window.history.back();
+        } else {
+          window.close();
+        }
+      }, 5000); // 5 secondes
+    });
+  </script></body>
+</html>
